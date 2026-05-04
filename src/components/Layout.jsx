@@ -140,7 +140,6 @@ export default function Layout() {
             </button>
             <h1 className="font-display text-[18px] font-semibold text-soil">{pageTitle}</h1>
             <span className="hidden md:block text-[12px] text-black/40">
-              Thursday, 30 April 2026
             </span>
           </div>
 
