@@ -5,6 +5,7 @@ import Livestock from './pages/Livestock.jsx'
 import Stock from './pages/Stock.jsx'
 import Account from './pages/Account.jsx'
 import NutriLoopPage from "./pages/Nutriloop"
+import CarbonMarketplace from "./pages/CarbonMarketplace";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="livestock" element={<Livestock />} />
         <Route path="stock" element={<Stock />} />
+        <Route path="/carbon" element={<CarbonMarketplace />} />
 
         {/*<Route path="nutriloop" element={<NutriLoopPage />} />*/}
 
