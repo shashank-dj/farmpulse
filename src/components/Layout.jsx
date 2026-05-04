@@ -8,6 +8,9 @@ const navItems = [
 
   { to: '/stock', icon: '📦', label: 'Stock', badge: { text: '!', color: 'bg-amber-farm text-soil' } },
 
+  // ✅ NEW: Carbon Marketplace added properly
+  { to: '/carbon', icon: '🌱', label: 'Carbon', badge: { text: 'NEW', color: 'bg-green-600 text-white' } },
+
   { to: '/account', icon: '👤', label: 'Account', badge: null },
 ]
 
@@ -44,23 +47,36 @@ export default function Layout() {
       >
         {/* Brand */}
         <div className="px-[22px] pt-7 pb-[22px] border-b border-white/[0.08]">
-          <p className="text-[9px] tracking-[0.22em] uppercase text-white/35 mb-1.5">Farm Management</p>
+          <p className="text-[9px] tracking-[0.22em] uppercase text-white/35 mb-1.5">
+            Farm Management
+          </p>
           <div className="font-display text-2xl font-black text-cream flex items-center gap-2 leading-none">
             <span className="w-2 h-2 rounded-full bg-sage flex-shrink-0" />
             FarmPulse
           </div>
-          <p className="text-[11px] text-white/40 mt-1 font-light">Operations Dashboard</p>
+          <p className="text-[11px] text-white/40 mt-1 font-light">
+            Operations Dashboard
+          </p>
         </div>
 
         {/* Farm Card */}
         <div className="mx-3.5 my-4 bg-white/[0.06] border border-white/10 rounded-[10px] px-3.5 py-3">
-          <p className="text-[9px] tracking-[0.16em] uppercase text-white/35 mb-1">Active Farm</p>
-          <p className="font-display text-[15px] font-semibold text-cream">Greenfield Estate</p>
-          <p className="text-[11px] text-white/40 mt-0.5">Lombardy · 340 ha</p>
+          <p className="text-[9px] tracking-[0.16em] uppercase text-white/35 mb-1">
+            Active Farm
+          </p>
+          <p className="font-display text-[15px] font-semibold text-cream">
+            Greenfield Estate
+          </p>
+          <p className="text-[11px] text-white/40 mt-0.5">
+            Lombardy · 340 ha
+          </p>
         </div>
 
         {/* Navigation */}
-        <p className="text-[9px] tracking-[0.18em] uppercase text-white/25 px-[22px] pt-3.5 pb-1.5">Navigate</p>
+        <p className="text-[9px] tracking-[0.18em] uppercase text-white/25 px-[22px] pt-3.5 pb-1.5">
+          Navigate
+        </p>
+
         {navItems.map(item => (
           <NavLink
             key={item.to}
@@ -70,15 +86,15 @@ export default function Layout() {
               'flex items-center gap-2.5 px-[22px] py-2.5 text-[13px]',
               'border-l-[3px] transition-all duration-[180ms]',
 
-              // ✅ Special highlight for NutriLoop
               isActive
-                ? item.to === '/nutriloop'
-                  ? 'text-cream bg-[#90caf9]/20 border-[#90caf9] font-semibold'
-                  : 'text-cream bg-white/[0.07] border-sage font-medium'
+                ? 'text-cream bg-white/[0.07] border-sage font-medium'
                 : 'text-white/50 border-transparent hover:text-cream hover:bg-white/[0.04]',
             ].join(' ')}
           >
-            <span className="text-base min-w-[20px] text-center">{item.icon}</span>
+            <span className="text-base min-w-[20px] text-center">
+              {item.icon}
+            </span>
+
             <span className="flex-1">{item.label}</span>
 
             {item.badge && (
@@ -90,14 +106,20 @@ export default function Layout() {
         ))}
 
         {/* Priority Legend */}
-        <p className="text-[9px] tracking-[0.18em] uppercase text-white/25 px-[22px] pt-5 pb-2">Feature Priority</p>
+        <p className="text-[9px] tracking-[0.18em] uppercase text-white/25 px-[22px] pt-5 pb-2">
+          Feature Priority
+        </p>
+
         <div className="px-3.5 pb-4 flex flex-col gap-1">
           {[
             { dot: 'bg-sage', label: 'Must — Core' },
             { dot: 'bg-[#90caf9]', label: 'Should — Important' },
             { dot: 'bg-amber-farm', label: 'Could — Nice-to-have' },
           ].map(({ dot, label }) => (
-            <div key={label} className="flex items-center gap-1.5 text-[11px] text-white/40 px-2 py-1 rounded-md">
+            <div
+              key={label}
+              className="flex items-center gap-1.5 text-[11px] text-white/40 px-2 py-1 rounded-md"
+            >
               <span className={`w-[7px] h-[7px] rounded-full ${dot}`} />
               {label}
             </div>
@@ -111,8 +133,12 @@ export default function Layout() {
               👨‍🌾
             </div>
             <div>
-              <p className="text-[12px] font-medium text-white/80">Marco Bianchi</p>
-              <p className="text-[10px] text-white/35">Farm Owner</p>
+              <p className="text-[12px] font-medium text-white/80">
+                Marco Bianchi
+              </p>
+              <p className="text-[10px] text-white/35">
+                Farm Owner
+              </p>
             </div>
           </div>
         </div>
@@ -130,14 +156,21 @@ export default function Layout() {
             >
               ☰
             </button>
-            <h1 className="font-display text-[18px] font-semibold text-soil">{pageTitle}</h1>
-            <span className="hidden md:block text-[12px] text-black/40">
-            </span>
+
+            <h1 className="font-display text-[18px] font-semibold text-soil">
+              {pageTitle}
+            </h1>
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="w-8 h-8 flex items-center justify-center text-black/50">🔔</button>
-            <button className="hidden md:flex w-8 h-8 items-center justify-center text-black/50">⚙️</button>
+            <button className="w-8 h-8 flex items-center justify-center text-black/50">
+              🔔
+            </button>
+
+            <button className="hidden md:flex w-8 h-8 items-center justify-center text-black/50">
+              ⚙️
+            </button>
+
             <button className="hidden md:block text-[13px] px-4 py-1.5 rounded-lg bg-moss text-white">
               ＋ Add Entry
             </button>
@@ -167,6 +200,7 @@ export default function Layout() {
                   {item.badge.text}
                 </span>
               )}
+
               <span className="text-xl">{item.icon}</span>
               <span className="text-[10px]">{item.label}</span>
             </NavLink>
