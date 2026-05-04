@@ -8,7 +8,6 @@ const navItems = [
 
   { to: '/stock', icon: '📦', label: 'Stock', badge: { text: '!', color: 'bg-amber-farm text-soil' } },
 
-  // ✅ NutriLoop added
   { 
     to: '/nutriloop', 
     icon: '🧠', 
