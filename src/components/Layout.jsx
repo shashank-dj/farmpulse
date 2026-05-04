@@ -8,13 +8,12 @@ const navItems = [
 
   { to: '/stock', icon: '📦', label: 'Stock', badge: { text: '!', color: 'bg-amber-farm text-soil' } },
 
-  {/*{ 
+  { 
     to: '/nutriloop', 
     icon: '🧠', 
     label: 'NutriLoop', 
     badge: { text: 'AI', color: 'bg-[#90caf9] text-soil' } 
-  },*/}
-
+  },
   { to: '/account', icon: '👤', label: 'Account', badge: null },
 ]
 
