@@ -17,7 +17,7 @@ export default function App() {
         <Route path="livestock" element={<Livestock />} />
         <Route path="stock" element={<Stock />} />
 
-        // <Route path="nutriloop" element={<NutriLoopPage />} />
+        {/*<Route path="nutriloop" element={<NutriLoopPage />} />*/}
 
         <Route path="account" element={<Account />} />
 
